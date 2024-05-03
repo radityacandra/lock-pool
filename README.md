@@ -18,8 +18,8 @@ lock_pool := lp.NewLockPool()
 
 - use
 ```
-context.Background()
-lp.Acquire(ctx, "some-lock")
+ctx := context.Background()
+lock_pool.Acquire(ctx, "some-lock")
 // do some task here
-lp.Release(ctx, "some-lock")
+lock_pool.Release(ctx, "some-lock")
 ```
